@@ -1,11 +1,11 @@
-import yargs from "yargs";
-import { hideBin } from "yargs/helpers";
-import {
+const yargs = require("yargs");
+const { hideBin } = require("yargs/helpers");
+const {
   listContacts,
   getContactById,
   removeContact,
   addContact,
-} from "./contacts.js";
+} = require("./contacts");
 
 async function invokeAction({ action, id, name, email, phone }) {
   switch (action) {
